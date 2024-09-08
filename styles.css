@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; /* Changed to white for better contrast */
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #000; /* Changed to black */
+}
+
+.background {
+    background: url('v.jpg') no-repeat; /* Centers the GIF */
+    background-size: cover; /* Ensures the GIF covers the entire container */
+    width: 120%;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.heading {
+    padding-left: 30px;
+}
+
+.firstcontainer {
+    width: 20%;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 160vh; /* Adjust height as needed */
+    background-color: #1a1a1a; /* Dark background for better contrast */
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    font-size: large;
+    gap: 10px; /* Space between images */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: #025fff; /* Blue background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff; /* White color for heading */
+}
+
+.motivational {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+.motivational li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff; /* White color for list items */
+}
+
+.feedback-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.feedback-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff; /* White color for form heading */
+    display: inline-block; /* Centering the heading */
+}
+
+.feedback-question {
+    margin-bottom: 20px;
+}
+
+.question-box {
+    background: #1a1a1a; /* Dark background for better contrast */
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+}
+
+.feedback-options {
+    background: #333; /* Dark background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.feedback-options label {
+    display: block;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #555; /* Darker border */
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-options input[type="radio"] {
+    display: none;
+}
+
+.feedback-options input[type="radio"]:checked + span {
+    background-color: #465c88; /* Blue background when checked */
+    border-color: #007bff;
+    color: #fff; /* White text */
+}
+
+.feedback-options span {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 0px;
+    border-radius: 4px;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Increased margin bottom for spacing */
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    background-color: #1a1a1a; /* Dark background */
+    color: #fff; /* White text */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.feedback-form button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #1a1d20; /* Blue background */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff; /* White text */
+    transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.thank-you {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff; /* White text */
+}
