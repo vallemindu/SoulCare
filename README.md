@@ -29,7 +29,9 @@ Please note that the MP4 video files used for recommendations are NOT included i
 Project Structure
 
 ├── app.py                 # Main Flask application
+
 ├── dataset.json           # Dataset for chatbot intents and responses
+
 ├── templates/
 │   ├── login/
 │   │   └── index.html     # Login page
@@ -37,6 +39,8 @@ Project Structure
 │   │   └── index.html     # Chatbot page
 │   └── feedback/
 │       └── index.html     # Feedback page
+
+
 ├── static/
 │   ├── css/               # CSS files for styling
 │   ├── js/                # JavaScript files for chatbot logic
@@ -44,6 +48,7 @@ Project Structure
 │   ├── chatbot/           # Static files (CSS/JS) for chatbot page
 │   ├── feedback/          # Static files (CSS/JS) for feedback page
 └── README.md              # This file
+
 Technologies Used
 Flask: Web framework for Python
 HTML/CSS/JavaScript: For the frontend
