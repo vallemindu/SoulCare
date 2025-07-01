@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Care Feedback Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback/styles.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="maincontainer">
+            <div class="firstcontainer">
+                <div class="gallery">
+                    <div class="heading">
+                <p>Happy Soon !!</p>
+                     </div>
+                     <a href="#">
+                        <img src="static/feedback/image1.jpg" alt="Description of Image">
+                    </a>
+                     <a href="#">
+                        <img src="static/feedback/image5.jpg" alt="Description of Image">
+                    </a>
+                    
+                    <a href="#">
+                        <video width="320" height="240" controls>
+                            <source src="static/feedback/vd1.mp4" type="video/mp4">
+                            
+                        </video>
+                    </a>
+                    <a href="#">
+                        <video width="320" height="240" controls>
+                            <source src="static/feedback/vd2.mp4" type="video/mp4">
+                            
+                        </video>
+                    </a>
+                    <a href="#">
+                        <video width="320" height="240" controls>
+                            <source src="static/feedback/vd3.mp4" type="video/mp4">
+                            
+                        </video>
+                    </a>
+                    <a href="#">
+                        <video width="320" height="240" controls>
+                            <source src="static/feedback/vd4.mp4" type="video/mp4">
+                            
+                        </video>
+                    </a>
+                    <a href="#">
+                        <video width="320" height="240" controls>
+                            <source src="static/feedback/vd5.mp4" type="video/mp4">
+                            
+                        </video>
+                    </a>
+                    <a href="#">
+                        <video width="320" height="240" controls>
+                            <source src="static/feedback/vd6.mp4" type="video/mp4">
+                            
+                        </video>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="container">    
+                <h1>We are FOR YOU !!</h1>
+                <ul class="motivational">
+                    <li>Find strength in your struggles.</li>
+                    <li>You are stronger than you think.</li>
+                    <li>Every challenge is an opportunity for growth.</li>
+                    <li>You have the power to overcome any obstacle.</li>
+                </ul>
+
+                <form id="feedbackForm" onsubmit="submitFeedback(); return false;">
+                    <div class="feedback-form">
+                        <h2>Feedback</h2>
+
+                        <div class="feedback-question">
+                            <div class="question-box">1. How long has our website been useful in reducing your sadness?</div>
+                            <div class="feedback-options">
+                                <label>
+                                    <input type="radio" name="usefulness" value="very_short_time" id="very_short_time">
+                                    <span>Very Short Time</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="usefulness" value="short_time" id="short_time">
+                                    <span>Short Time</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="usefulness" value="moderate_time" id="moderate_time">
+                                    <span>Moderate Time</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="usefulness" value="long_time" id="long_time">
+                                    <span>Long Time</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="feedback-question">
+                            <div class="question-box">2. Would you recommend our website to others in need?</div>
+                            <div class="feedback-options">
+                                <label>
+                                    <input type="radio" name="recommendation" value="yes_recommend" id="yes_recommend">
+                                    <span> Yes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="recommendation" value="maybe_recommend" id="maybe_recommend">
+                                    <span>Maybe</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="recommendation" value="no_recommend" id="no_recommend">
+                                    <span>No</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <label for="additional_feedback">Comments:</label><br>
+                        <textarea id="additional_feedback" rows="4" placeholder="Please share your thoughts..."></textarea>
+
+                        <button type="submit">Submit Feedback</button>
+                    </div>
+
+                    <input type="hidden" id="formSubmitted" name="formSubmitted">
+                </form>
+
+                <div class="thank-you" id="thankYouMessage">
+                    Thanks for your feedback!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            // Fetch selected values or text from feedback form
+            var usefulness = document.querySelector('input[name="usefulness"]:checked');
+            var recommendation = document.querySelector('input[name="recommendation"]:checked');
+            var additionalFeedback = document.getElementById('additional_feedback').value;
+
+            // Example of how you might handle the feedback submission (could be sent to server, etc.)
+            console.log("Usefulness: ", usefulness ? usefulness.value : "Not selected");
+            console.log("Recommendation: ", recommendation ? recommendation.value : "Not selected");
+            console.log("Additional Feedback: ", additionalFeedback);
+
+            // Display thank you message
+            document.getElementById('thankYouMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
